@@ -13,7 +13,7 @@
 
       <script>
         $(function() {
-          setupLanguages(["shell","ruby"]);
+          setupLanguages(["cURL"]);
         });
       </script>
   </head>
@@ -28,8 +28,7 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="cURL">cURL</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -73,26 +72,26 @@ WebStreak API access is restricted to our partner companies.
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-</span><span class="err">id:</span><span class="w"> </span><span class="err">15,</span><span class="w">
-</span><span class="err">name:</span><span class="w"> </span><span class="nt">"Acme Cars"</span><span class="err">,</span><span class="w">
-</span><span class="err">street</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
-</span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
-</span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
-</span><span class="err">state</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
-</span><span class="err">latitude</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
-</span><span class="err">longitude</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
-</span><span class="err">phone_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Cars"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
+</span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
+</span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
 </span><span class="p">}</span><span class="err">,</span><span class="w"> 
 </span><span class="p">{</span><span class="w">
-</span><span class="err">id:</span><span class="w"> </span><span class="err">16,</span><span class="w">
-</span><span class="err">name:</span><span class="w"> </span><span class="nt">"Acme Cars East"</span><span class="err">,</span><span class="w">
-</span><span class="err">street</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 East 104th St."</span><span class="p">,</span><span class="w">
-</span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
-</span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
-</span><span class="err">state</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
-</span><span class="err">latitude</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
-</span><span class="err">longitude</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
-</span><span class="err">phone_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-5555"</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Cars East"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 East 104th St."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
+</span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
+</span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-5555"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -110,15 +109,15 @@ WebStreak API access is restricted to our partner companies.
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-</span><span class="err">id:</span><span class="w"> </span><span class="err">15,</span><span class="w">
-</span><span class="err">name:</span><span class="w"> </span><span class="nt">"Acme Cars"</span><span class="err">,</span><span class="w">
-</span><span class="err">street</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
-</span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
-</span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
-</span><span class="err">state</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
-</span><span class="err">latitude</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
-</span><span class="err">longitude</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
-</span><span class="err">phone_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Cars"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
+</span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
+</span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -158,26 +157,26 @@ In order to limit the number of results returned, requests to the vehicles endpo
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-</span><span class="err">dealer_id:</span><span class="w"> </span><span class="err">15,</span><span class="w">
-</span><span class="err">vin:</span><span class="w"> </span><span class="nt">"1FTFW1EV0AKA83079"</span><span class="err">,</span><span class="w">
-</span><span class="err">stock_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"53782-1"</span><span class="p">,</span><span class="w">
-</span><span class="err">year</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010"</span><span class="p">,</span><span class="w">
-</span><span class="err">make</span><span class="p">:</span><span class="w"> </span><span class="s2">"F-150"</span><span class="p">,</span><span class="w">
-</span><span class="err">sub_model</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-</span><span class="err">is_new</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-</span><span class="err">trim</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lariat"</span><span class="p">,</span><span class="w">
-</span><span class="err">trim_description</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-</span><span class="err">color_ext</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuxedo Black"</span><span class="p">,</span><span class="w">
-</span><span class="err">color_int</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="p">,</span><span class="w">
-</span><span class="err">engine</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.4L 8 Cylinder"</span><span class="p">,</span><span class="w">
-</span><span class="err">engine_displacement</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-</span><span class="err">fuel</span><span class="p">:</span><span class="w"> </span><span class="s2">"Flex Fuel"</span><span class="p">,</span><span class="w">
-</span><span class="err">prices</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="err">price_internet:</span><span class="w"> </span><span class="nt">"26988"</span><span class="w">
-</span><span class="err">}</span><span class="p">,</span><span class="w">
-</span><span class="err">updated_at</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-05 09:33:12 UTC"</span><span class="p">,</span><span class="w">
-</span><span class="err">created_at</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-01 21:33:32 UTC"</span><span class="p">,</span><span class="w">
-</span><span class="err">photos</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="nt">"dealer_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+</span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1FTFW1EV0AKA83079"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"stock_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"53782-1"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"make"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F-150"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"sub_model"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"is_new"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="nt">"trim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lariat"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"trim_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"color_ext"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuxedo Black"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"color_int"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"engine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.4L 8 Cylinder"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"engine_displacement"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"fuel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Flex Fuel"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"price_internet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26988"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-05 09:33:12 UTC"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-01 21:33:32 UTC"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"photos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
 </span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_1.jpg"</span><span class="p">,</span><span class="w">
 </span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_2.jpg"</span><span class="p">,</span><span class="w">
 </span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_3.jpg"</span><span class="p">,</span><span class="w">
@@ -190,7 +189,7 @@ In order to limit the number of results returned, requests to the vehicles endpo
 </span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_10.jpg"</span><span class="p">,</span><span class="w">
 </span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_11.jpg"</span><span class="w">
 </span><span class="p">],</span><span class="w">
-</span><span class="err">certification</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manufacturer"</span><span class="w">
+</span><span class="nt">"certification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manufacturer"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -231,8 +230,7 @@ In order to limit the number of results returned, requests to the vehicles endpo
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="cURL">cURL</a>
           </div>
       </div>
     </div>
