@@ -16,26 +16,26 @@ curl http://websites.webstreak.com/api/public/vehicles?dealer_id=15
 
 ```json
 {
-dealer_id: 15,
-vin: "1FTFW1EV0AKA83079",
-stock_number: "53782-1",
-year: "2010",
-make: "F-150",
-sub_model: null,
-is_new: false,
-trim: "Lariat",
-trim_description: null,
-color_ext: "Tuxedo Black",
-color_int: "Other",
-engine: "5.4L 8 Cylinder",
-engine_displacement: null,
-fuel: "Flex Fuel",
-prices: {
-price_internet: "26988"
+"dealer_id": 15,
+"vin": "1FTFW1EV0AKA83079",
+"stock_number": "53782-1",
+"year": "2010",
+"make": "F-150",
+"sub_model": null,
+"is_new": false,
+"trim": "Lariat",
+"trim_description": null,
+"color_ext": "Tuxedo Black",
+"color_int": "Other",
+"engine": "5.4L 8 Cylinder",
+"engine_displacement": null,
+"fuel": "Flex Fuel",
+"prices": {
+"price_internet": "26988"
 },
-updated_at: "2015-12-05 09:33:12 UTC",
-created_at: "2015-12-01 21:33:32 UTC",
-photos: [
+"updated_at": "2015-12-05 09:33:12 UTC",
+"created_at": "2015-12-01 21:33:32 UTC",
+"photos": [
 "http://photos.ebizautos.com/5241/14450162/14450162_1.jpg",
 "http://photos.ebizautos.com/5241/14450162/14450162_2.jpg",
 "http://photos.ebizautos.com/5241/14450162/14450162_3.jpg",
@@ -48,7 +48,7 @@ photos: [
 "http://photos.ebizautos.com/5241/14450162/14450162_10.jpg",
 "http://photos.ebizautos.com/5241/14450162/14450162_11.jpg"
 ],
-certification: "Manufacturer"
+"certification": "Manufacturer"
 }
 ```
 

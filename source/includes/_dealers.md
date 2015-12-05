@@ -10,26 +10,26 @@ curl http://websites.webstreak.com/api/public/dealers
 
 ```json
 {
-id: 15,
-name: "Acme Cars",
-street: "1151 West 104th St.",
-city: "Motor City",
-zip: "34114",
-state: "MO",
-latitude: 34.9389458,
-longitude: -94.6054878,
-phone_number: "(222)-333-4444"
+"id": 15,
+"name": "Acme Cars",
+"street": "1151 West 104th St.",
+"city": "Motor City",
+"zip": "34114",
+"state": "MO",
+"latitude": 34.9389458,
+"longitude": -94.6054878,
+"phone_number": "(222)-333-4444"
 }, 
 {
-id: 16,
-name: "Acme Cars East",
-street: "1151 East 104th St.",
-city: "Motor City",
-zip: "34114",
-state: "MO",
-latitude: 34.9389458,
-longitude: -94.6054878,
-phone_number: "(222)-333-5555"
+"id": 16,
+"name": "Acme Cars East",
+"street": "1151 East 104th St.",
+"city": "Motor City",
+"zip": "34114",
+"state": "MO",
+"latitude": 34.9389458,
+"longitude": -94.6054878,
+"phone_number": "(222)-333-5555"
 }
 ```
 
@@ -50,15 +50,15 @@ curl http://websites.webstreak.com/api/public/dealers/15
 
 ```json
 {
-id: 15,
-name: "Acme Cars",
-street: "1151 West 104th St.",
-city: "Motor City",
-zip: "34114",
-state: "MO",
-latitude: 34.9389458,
-longitude: -94.6054878,
-phone_number: "(222)-333-4444"
+"id": 15,
+"name": "Acme Cars",
+"street": "1151 West 104th St.",
+"city": "Motor City",
+"zip": "34114",
+"state": "MO",
+"latitude": 34.9389458,
+"longitude": -94.6054878,
+"phone_number": "(222)-333-4444"
 }
 ```
 
