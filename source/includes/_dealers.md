@@ -9,7 +9,7 @@ curl http://websites.webstreak.com/api/public/dealers
 > The above command returns JSON structured like this:
 
 ```json
-{
+[{
 "id": 15,
 "name": "Acme Cars",
 "street": "1151 West 104th St.",
@@ -30,7 +30,7 @@ curl http://websites.webstreak.com/api/public/dealers
 "latitude": 34.9389458,
 "longitude": -94.6054878,
 "phone_number": "(222)-333-5555"
-}
+}]
 ```
 
 This endpoint retrieves all dealers.

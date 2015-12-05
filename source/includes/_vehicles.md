@@ -15,7 +15,7 @@ curl http://websites.webstreak.com/api/public/vehicles?dealer_id=15
 > The above command returns JSON structured like this:
 
 ```json
-{
+[{
 "dealer_id": 15,
 "vin": "1FTFW1EV0AKA83079",
 "stock_number": "53782-1",
@@ -49,7 +49,7 @@ curl http://websites.webstreak.com/api/public/vehicles?dealer_id=15
 "http://photos.ebizautos.com/5241/14450162/14450162_11.jpg"
 ],
 "certification": "Manufacturer"
-}
+}]
 ```
 
 ### HTTP Request
