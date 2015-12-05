@@ -71,7 +71,7 @@ WebStreak API access is restricted to our partner companies.
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<pre class="highlight json"><code><span class="p">[{</span><span class="w">
 </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
 </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Cars"</span><span class="p">,</span><span class="w">
 </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
@@ -81,7 +81,7 @@ WebStreak API access is restricted to our partner companies.
 </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
 </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
 </span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
-</span><span class="p">}</span><span class="err">,</span><span class="w"> 
+</span><span class="p">},</span><span class="w"> 
 </span><span class="p">{</span><span class="w">
 </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
 </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Cars East"</span><span class="p">,</span><span class="w">
@@ -92,7 +92,7 @@ WebStreak API access is restricted to our partner companies.
 </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
 </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
 </span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-5555"</span><span class="w">
-</span><span class="p">}</span><span class="w">
+</span><span class="p">}]</span><span class="w">
 </span></code></pre>
 
 <p>This endpoint retrieves all dealers.</p>
@@ -156,7 +156,7 @@ In order to limit the number of results returned, requests to the vehicles endpo
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<pre class="highlight json"><code><span class="p">[{</span><span class="w">
 </span><span class="nt">"dealer_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
 </span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1FTFW1EV0AKA83079"</span><span class="p">,</span><span class="w">
 </span><span class="nt">"stock_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"53782-1"</span><span class="p">,</span><span class="w">
@@ -190,7 +190,7 @@ In order to limit the number of results returned, requests to the vehicles endpo
 </span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_11.jpg"</span><span class="w">
 </span><span class="p">],</span><span class="w">
 </span><span class="nt">"certification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manufacturer"</span><span class="w">
-</span><span class="p">}</span><span class="w">
+</span><span class="p">}]</span><span class="w">
 </span></code></pre>
 
 <h3 id="http-request">HTTP Request</h3>
