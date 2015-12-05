@@ -101,46 +101,6 @@ WebStreak API access is restricted to our partner companies.
 
 <p><code class="prettyprint">GET http://websites.webstreak.com/api/public/dealers</code></p>
 
-<h2 id="get-a-specific-dealer">Get a Specific Dealer</h2>
-<pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/dealers/15
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
-</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Cars"</span><span class="p">,</span><span class="w">
-</span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
-</span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
-</span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
-</span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
-</span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
-</span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
-</span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a specific dealer.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://websites.webstreak.com/api/public/dealers/&lt;ID&gt;</code></p>
-
-<h3 id="url-parameters">URL Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the dealer to retrieve</td>
-</tr>
-</tbody></table>
-
           <h1 id="vehicles">Vehicles</h1>
 
 <h2 id="get-vehicles">Get Vehicles</h2>
