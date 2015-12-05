@@ -43,65 +43,90 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the WebStreak Inventory API! You can use our API to access inventory API endpoints, which can get information on various dealers, vehicles, and leads in our database.</p>
+<p>Welcome to the WebStreak Inventory API! You can use our API to access inventory API endpoints, which can get information on various dealers and vehicles in our database.</p>
 
 <aside class="notice">
 WebStreak API access is restricted to our partner companies.
 </aside>
 
-<p>We have language bindings in Shell and Ruby. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>You can view code examples in the dark area to the right.</p>
 
-<p>Production API is available at <code class="prettyprint">api.webstreak.com</code> .</p>
+<p>Production API is available at <code class="prettyprint">websites.webstreak.com/api/public</code> .</p>
 
           <h1 id="authentication">Authentication</h1>
 
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Example call to dealers endpoint with api key:</p>
 </blockquote>
-<pre class="highlight ruby"><code>
-</code></pre>
-<pre class="highlight shell"><code>
+<pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/dealers?api_key<span class="o">=</span>6b248ea92c8fa7cf7428cbae62e1ede1
 </code></pre>
 
-<p>Auth info here</p>
+<p>Authentication is accomplished by providing your api key with each request. API access is limited to our partner companies.</p>
 
           <h1 id="dealers">Dealers</h1>
 
 <h2 id="get-all-dealers">Get All Dealers</h2>
-<pre class="highlight ruby"><code>
-</code></pre>
-<pre class="highlight shell"><code>
+<pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/dealers
 </code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><code><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+</span><span class="err">id:</span><span class="w"> </span><span class="err">15,</span><span class="w">
+</span><span class="err">name:</span><span class="w"> </span><span class="nt">"Acme Cars"</span><span class="err">,</span><span class="w">
+</span><span class="err">street</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
+</span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
+</span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
+</span><span class="err">state</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
+</span><span class="err">latitude</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
+</span><span class="err">longitude</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
+</span><span class="err">phone_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w"> 
+</span><span class="p">{</span><span class="w">
+</span><span class="err">id:</span><span class="w"> </span><span class="err">16,</span><span class="w">
+</span><span class="err">name:</span><span class="w"> </span><span class="nt">"Acme Cars East"</span><span class="err">,</span><span class="w">
+</span><span class="err">street</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 East 104th St."</span><span class="p">,</span><span class="w">
+</span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
+</span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
+</span><span class="err">state</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
+</span><span class="err">latitude</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
+</span><span class="err">longitude</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
+</span><span class="err">phone_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-5555"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <p>This endpoint retrieves all dealers.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.webstreak.com/dealers</code></p>
+<p><code class="prettyprint">GET http://websites.webstreak.com/api/public/dealers</code></p>
 
 <h2 id="get-a-specific-dealer">Get a Specific Dealer</h2>
-<pre class="highlight ruby"><code>
-</code></pre>
-<pre class="highlight shell"><code>
+<pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/dealers/15
 </code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><code><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+</span><span class="err">id:</span><span class="w"> </span><span class="err">15,</span><span class="w">
+</span><span class="err">name:</span><span class="w"> </span><span class="nt">"Acme Cars"</span><span class="err">,</span><span class="w">
+</span><span class="err">street</span><span class="p">:</span><span class="w"> </span><span class="s2">"1151 West 104th St."</span><span class="p">,</span><span class="w">
+</span><span class="err">city</span><span class="p">:</span><span class="w"> </span><span class="s2">"Motor City"</span><span class="p">,</span><span class="w">
+</span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">"34114"</span><span class="p">,</span><span class="w">
+</span><span class="err">state</span><span class="p">:</span><span class="w"> </span><span class="s2">"MO"</span><span class="p">,</span><span class="w">
+</span><span class="err">latitude</span><span class="p">:</span><span class="w"> </span><span class="mf">34.9389458</span><span class="p">,</span><span class="w">
+</span><span class="err">longitude</span><span class="p">:</span><span class="w"> </span><span class="mf">-94.6054878</span><span class="p">,</span><span class="w">
+</span><span class="err">phone_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-4444"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <p>This endpoint retrieves a specific dealer.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.webstreak.com/dealers/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET http://websites.webstreak.com/api/public/dealers/&lt;ID&gt;</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -119,27 +144,59 @@ WebStreak API access is restricted to our partner companies.
 
           <h1 id="vehicles">Vehicles</h1>
 
-<h2 id="get-all-vehicles">Get All Vehicles</h2>
+<h2 id="get-vehicles">Get Vehicles</h2>
 
-<p>This endpoint retrieves all vehicles.</p>
+<p>This endpoint retrieves all vehicles matching the specified query parameters.</p>
 
 <aside class="warning">
-Requests for all vehicles with no query parameters may be extremely slow.
+In order to limit the number of results returned, requests to the vehicles endpoint must always include a valid dealer.
 </aside>
-<pre class="highlight ruby"><code>
-</code></pre>
-<pre class="highlight shell"><code>
+<pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/vehicles?dealer_id<span class="o">=</span>15
 </code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><code><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+</span><span class="err">dealer_id:</span><span class="w"> </span><span class="err">15,</span><span class="w">
+</span><span class="err">vin:</span><span class="w"> </span><span class="nt">"1FTFW1EV0AKA83079"</span><span class="err">,</span><span class="w">
+</span><span class="err">stock_number</span><span class="p">:</span><span class="w"> </span><span class="s2">"53782-1"</span><span class="p">,</span><span class="w">
+</span><span class="err">year</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010"</span><span class="p">,</span><span class="w">
+</span><span class="err">make</span><span class="p">:</span><span class="w"> </span><span class="s2">"F-150"</span><span class="p">,</span><span class="w">
+</span><span class="err">sub_model</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="err">is_new</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="err">trim</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lariat"</span><span class="p">,</span><span class="w">
+</span><span class="err">trim_description</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="err">color_ext</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuxedo Black"</span><span class="p">,</span><span class="w">
+</span><span class="err">color_int</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="p">,</span><span class="w">
+</span><span class="err">engine</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.4L 8 Cylinder"</span><span class="p">,</span><span class="w">
+</span><span class="err">engine_displacement</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="err">fuel</span><span class="p">:</span><span class="w"> </span><span class="s2">"Flex Fuel"</span><span class="p">,</span><span class="w">
+</span><span class="err">prices</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="err">price_internet:</span><span class="w"> </span><span class="nt">"26988"</span><span class="w">
+</span><span class="err">}</span><span class="p">,</span><span class="w">
+</span><span class="err">updated_at</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-05 09:33:12 UTC"</span><span class="p">,</span><span class="w">
+</span><span class="err">created_at</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-01 21:33:32 UTC"</span><span class="p">,</span><span class="w">
+</span><span class="err">photos</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_1.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_2.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_3.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_4.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_5.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_6.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_7.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_8.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_9.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_10.jpg"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"http://photos.ebizautos.com/5241/14450162/14450162_11.jpg"</span><span class="w">
+</span><span class="p">],</span><span class="w">
+</span><span class="err">certification</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manufacturer"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.webstreak.com/vehicles</code></p>
+<p><code class="prettyprint">GET http://websites.webstreak.com/api/public/vehicles?dealer_id=&lt;DEALER_ID&gt;</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -158,16 +215,19 @@ Requests for all vehicles with no query parameters may be extremely slow.
 <td>query by vin number</td>
 </tr>
 <tr>
-<td>stock</td>
+<td>stock_number</td>
 <td>query by stock number</td>
 </tr>
 <tr>
+<td>created_since</td>
+<td>all vehicles created after specified time</td>
+</tr>
+<tr>
 <td>updated_since</td>
-<td>all vehicles updated/created after specified time</td>
+<td>all vehicles updated after specified time</td>
 </tr>
 </tbody></table>
 
-          
       </div>
       <div class="dark-box">
           <div class="lang-selector">
