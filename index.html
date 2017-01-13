@@ -6,27 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>API Reference</title>
 
-    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="javascripts/all.js" type="text/javascript"></script>
-
-      <script>
-        $(function() {
-          setupLanguages(["cURL"]);
-        });
-      </script>
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.highlight .err {
+  color: #272822;
+  background-color: #f92672;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #f4bf75;
+}
+.highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #f8f8f2;
+}
+.highlight .p, .highlight .pi {
+  color: #f8f8f2;
+}
+.highlight .gi {
+  color: #a6e22e;
+}
+.highlight .gd {
+  color: #f92672;
+}
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff;
+}
+.highlight .kc {
+  color: #fd971f;
+}
+.highlight .kt {
+  color: #fd971f;
+}
+.highlight .kd {
+  color: #fd971f;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #a6e22e;
+}
+.highlight .sr {
+  color: #a1efe4;
+}
+.highlight .si {
+  color: #cc6633;
+}
+.highlight .se {
+  color: #cc6633;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #66d9ef;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #a6e22e;
+}
+.highlight .ss {
+  color: #a6e22e;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index">
+  <body class="index" data-languages="[&quot;cURL&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" />
+        <img src="images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="tocify-wrapper">
-      <img src="images/logo.png" />
+      <img src="images/logo.png" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="cURL">cURL</a>
         </div>
@@ -42,15 +115,16 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the WebStreak Inventory API! You can use our API to access inventory API endpoints, which can get information on various dealers and vehicles in our database.</p>
+<p>Welcome to the Webstreak API! You can use our API to access inventory &amp; campaign API endpoints.</p>
 
 <aside class="notice">
-WebStreak API access is restricted to our partner companies.
+Webstreak API access is restricted to our partner companies.
 </aside>
 
 <p>You can view code examples in the dark area to the right.</p>
 
-<p>Production API is available at <code class="prettyprint">websites.webstreak.com/api/public</code> .</p>
+<p>Production inventory API is available at <code class="prettyprint">http://websites.webstreak.com/api/public</code> .
+Production campaigns API is available at <code class="prettyprint">https://campaigns.webstreak.com/api</code> .</p>
 
           <h1 id="authentication">Authentication</h1>
 
@@ -59,15 +133,15 @@ WebStreak API access is restricted to our partner companies.
 </blockquote>
 <pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/dealers?api_key<span class="o">=</span>6b248ea92c8fa7cf7428cbae62e1ede1
 </code></pre>
-
 <p>Authentication is accomplished by providing your api key with each request. API access is limited to our partner companies.</p>
+
+<p>Note: Access to campaign resources and inventory resources are managed separately.</p>
 
           <h1 id="dealers">Dealers</h1>
 
 <h2 id="get-all-dealers">Get All Dealers</h2>
 <pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/dealers
 </code></pre>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -94,7 +168,6 @@ WebStreak API access is restricted to our partner companies.
 </span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(222)-333-5555"</span><span class="w">
 </span><span class="p">}]</span><span class="w">
 </span></code></pre>
-
 <p>This endpoint retrieves all dealers.</p>
 
 <h3 id="http-request">HTTP Request</h3>
@@ -112,7 +185,6 @@ In order to limit the number of results returned, requests to the vehicles endpo
 </aside>
 <pre class="highlight shell"><code>curl http://websites.webstreak.com/api/public/vehicles?dealer_id<span class="o">=</span>15
 </code></pre>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -152,7 +224,6 @@ In order to limit the number of results returned, requests to the vehicles endpo
 </span><span class="nt">"certification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manufacturer"</span><span class="w">
 </span><span class="p">}]</span><span class="w">
 </span></code></pre>
-
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">GET http://websites.webstreak.com/api/public/vehicles?dealer_id=&lt;DEALER_ID&gt;</code></p>
@@ -184,6 +255,129 @@ In order to limit the number of results returned, requests to the vehicles endpo
 <tr>
 <td>updated_since</td>
 <td>all vehicles updated after specified time</td>
+</tr>
+</tbody></table>
+
+          <h1 id="clients">Clients</h1>
+
+<h2 id="get-clients">Get Clients</h2>
+
+<p>This endpoint retrieves all digital campaign clients attached to your API key.</p>
+<pre class="highlight shell"><code>curl https://campaigns.webstreak.com/api/clients
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+ </span><span class="p">{</span><span class="w">
+   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1123</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Car Dealer Name"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"city"</span><span class="p">:</span><span class="s2">"Raleigh"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"state"</span><span class="p">:</span><span class="s2">"NC"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"street"</span><span class="p">:</span><span class="s2">"1 Fayetteville Rd."</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"zip"</span><span class="p">:</span><span class="s2">"27510"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"phone"</span><span class="p">:</span><span class="s2">"919-123-1212"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"created_at"</span><span class="p">:</span><span class="s2">"2016-05-06T15:19:28.741-04:00"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"site_url"</span><span class="p">:</span><span class="s2">"example.com"</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /clients?api_key=apikey</code></p>
+
+          <h1 id="campaigns">Campaigns</h1>
+
+<h2 id="get-campaigns">Get Campaigns</h2>
+
+<p>This endpoint retrieves all digital campaigns attached to your API key.</p>
+<pre class="highlight shell"><code>curl https://campaigns.webstreak.com/api/campaigns
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">17667</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"white_label_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234ABC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_date"</span><span class="p">:</span><span class="s2">"2014-09-04"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"end_date"</span><span class="p">:</span><span class="s2">"2014-09-30"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"budget"</span><span class="p">:</span><span class="s2">"3000.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"NewCar"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"product_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Search"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"utm_campaign_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UsedCar"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="mi">17668</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"white_label_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1235ABC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_date"</span><span class="p">:</span><span class="s2">"2014-10-01"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"end_date"</span><span class="p">:</span><span class="s2">"2014-10-30"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"budget"</span><span class="p">:</span><span class="s2">"2000.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"UsedCar"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"product_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Search"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"utm_campaign_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UsedCar"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /campaigns?api_key=apikey</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start_date</td>
+<td>lower bound of date range to query (YYYYMMDD)</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>upper bound of date range to query (YYYYMMDD)</td>
+</tr>
+</tbody></table>
+
+          <h1 id="campaign-results">Campaign Results</h1>
+
+<h2 id="get-campaign-results">Get Campaign Results</h2>
+
+<p>This endpoint retrieves all digital campaigns attached to your API key.</p>
+<pre class="highlight shell"><code>curl https://campaigns.webstreak.com/api/campaigns/campaign_id/campaign_results
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"impressions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1406</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-08"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET /campaigns/campaign_id/campaign_results?api_key=apikey&amp;start_date=20160501&amp;end_date=20160530</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>campaign_id</td>
+<td>Required may either be a webstreak campaign id or a white label ID which you have provided</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>lower bound of date range to query (YYYYMMDD)</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>upper bound of date range to query (YYYYMMDD)</td>
 </tr>
 </tbody></table>
 
