@@ -7,3 +7,5 @@ curl http://websites.webstreak.com/api/public/dealers?api_key=6b248ea92c8fa7cf74
 ```
 
 Authentication is accomplished by providing your api key with each request. API access is limited to our partner companies.
+
+Note: Access to campaign resources and inventory resources are managed separately.
