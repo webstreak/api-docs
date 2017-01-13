@@ -19,4 +19,4 @@ Running Locally
 Deploying
 ------------------------------
 
-* Instructions [here](https://github.com/tripit/slate/wiki/Deploying-Slate).
+Run `deploy.sh`
