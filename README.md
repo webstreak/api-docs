@@ -1,7 +1,7 @@
 api-docs
 ========
 
-[docs.webstreak.com](http://docs.webstreak.com) built with [slate](http://tripit.github.io/slate), hosted on github pages. 
+[docs.webstreak.com](http://docs.webstreak.com) built with [slate](http://tripit.github.io/slate), hosted on github pages.
 
 Contributing
 ------------
@@ -19,4 +19,4 @@ Running Locally
 Deploying
 ------------------------------
 
-* Instructions [here](https://github.com/tripit/slate/wiki/Deploying-Slate). 
+* Instructions [here](https://github.com/tripit/slate/wiki/Deploying-Slate).
